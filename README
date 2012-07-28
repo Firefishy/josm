@@ -44,13 +44,24 @@ MacOS users just click on the .jar file icon.
             II. Development
 =============================================================================
 
-How to get the source code
---------------------------
+How to get the source code for original JOSM
+--------------------------------------------
 Download it directly from the subversion at 
 https://josm.openstreetmap.de/svn/trunk. To use the command line subversion 
 client, type
 
 svn co https://josm.openstreetmap.de/svn/trunk josm
+
+
+How to get the source code - for JOSM-FOSM
+------------------------------------------
+Download it directly from github at
+https://github.com/4x4falcon/josm.git
+
+To use the commandline git client, type
+
+git clone git://github.com/4x4falcon/josm.git
+
 
 
 Files & directories
