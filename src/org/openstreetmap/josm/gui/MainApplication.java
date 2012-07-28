@@ -93,7 +93,7 @@ public class MainApplication extends Main {
      */
     public static void showHelp() {
         // TODO: put in a platformHook for system that have no console by default
-        System.out.println(tr("Java OpenStreetMap Editor")+" ["
+        System.out.println(tr("Java OpenStreetMap Editor - fosm.org")+" ["
                 +Version.getInstance().getAgentString()+"]\n\n"+
                 tr("usage")+":\n"+
                 "\tjava -jar josm.jar <options>...\n\n"+
@@ -279,7 +279,7 @@ public class MainApplication extends Main {
         }
         Main.pref.updateSystemProperties();
 
-        JFrame mainFrame = new JFrame(tr("Java OpenStreetMap Editor"));
+        JFrame mainFrame = new JFrame(tr("Java OpenStreetMap Editor - fosm.org"));
         Main.parent = mainFrame;
 
         if (args.containsKey(Option.LOAD_PREFERENCES)) {

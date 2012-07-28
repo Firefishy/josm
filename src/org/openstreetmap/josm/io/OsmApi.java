@@ -81,7 +81,7 @@ public class OsmApi extends OsmConnection {
      *
      */
     static public OsmApi getOsmApi() {
-        String serverUrl = Main.pref.get("osm-server.url", "http://api.openstreetmap.org/api");
+        String serverUrl = Main.pref.get("osm-server.url", "http://fosm.org/api");
         if (serverUrl == null)
             throw new IllegalStateException(tr("Preference ''{0}'' missing. Cannot initialize OsmApi.", "osm-server.url"));
         return getOsmApi(serverUrl);
@@ -200,7 +200,7 @@ public class OsmApi extends OsmConnection {
             /* This is an interim solution for openstreetmap.org not currently
              * transmitting their imagery blacklist in the capabilities call.
              * remove this as soon as openstreetmap.org adds blacklists. */
-            if (this.serverUrl.matches(".*openstreetmap.org/api.*") && capabilities.getImageryBlacklist().isEmpty())
+            if (this.serverUrl.matches(".*fosm.org/api.*") && capabilities.getImageryBlacklist().isEmpty())
             {
                 capabilities.put("blacklist", "regex", ".*\\.google\\.com/.*");
                 capabilities.put("blacklist", "regex", ".*209\\.85\\.2\\d\\d.*");

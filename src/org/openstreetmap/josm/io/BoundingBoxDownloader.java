@@ -36,7 +36,7 @@ public class BoundingBoxDownloader extends OsmServerReader {
         GpxData result = null;
         for (int i = 0;!done;++i) {
             progressMonitor.subTask(tr("Downloading points {0} to {1}...", i * 5000, ((i + 1) * 5000)));
-            InputStream in = getInputStream(url+i, progressMonitor.createSubTaskMonitor(1, true));
+            InputStream in = getInputStream("http://api.openstreetmap.org/api/0.6/"+url+i, progressMonitor.createSubTaskMonitor(1, true));
             if (in == null) {
                 break;
             }

@@ -37,17 +37,20 @@ public abstract class AbstractInfoAction extends JosmAction {
      * @return the base URL, i.e. http://api.openstreetmap.org/browse
      */
     static public String getBaseBrowseUrl() {
-        String baseUrl = Main.pref.get("osm-server.url", "http://api.openstreetmap.org/api");
+/*
+        String baseUrl = Main.pref.get("osm-server.url", "http://fosm.org/api");
         Pattern pattern = Pattern.compile("/api/?$");
         String ret =  pattern.matcher(baseUrl).replaceAll("/browse");
         if (ret.equals(baseUrl)) {
             System.out.println(tr("WARNING: unexpected format of API base URL. Redirection to info or history page for OSM object will probably fail. API base URL is: ''{0}''",baseUrl));
         }
-        if (ret.startsWith("http://api.openstreetmap.org/")) {
-            ret = ret.substring("http://api.openstreetmap.org/".length());
-            ret = "http://www.openstreetmap.org/" + ret;
+        if (ret.startsWith("http://fosm.org/")) {
+            ret = ret.substring("http://fosm.org/".length());
+            ret = "http://fosm.org/" + ret;
         }
         return ret;
+*/
+	return "http://map.4x4falcon.com/browse";
     }
 
     /**
@@ -56,17 +59,20 @@ public abstract class AbstractInfoAction extends JosmAction {
      * @return the base URL, i.e. http://www.openstreetmap.org/user
      */
     static public String getBaseUserUrl() {
-        String baseUrl = Main.pref.get("osm-server.url", "http://api.openstreetmap.org/api");
+/*
+        String baseUrl = Main.pref.get("osm-server.url", "http://fosm.org/api");
         Pattern pattern = Pattern.compile("/api/?$");
         String ret =  pattern.matcher(baseUrl).replaceAll("/user");
         if (ret.equals(baseUrl)) {
             System.out.println(tr("WARNING: unexpected format of API base URL. Redirection to user page for OSM user will probably fail. API base URL is: ''{0}''",baseUrl));
         }
-        if (ret.startsWith("http://api.openstreetmap.org/")) {
-            ret = ret.substring("http://api.openstreetmap.org/".length());
-            ret = "http://www.openstreetmap.org/" + ret;
+        if (ret.startsWith("http://fosm.org/")) {
+            ret = ret.substring("http://fosm.org/".length());
+            ret = "http://fosm.org/" + ret;
         }
         return ret;
+*/
+	return "http://map.4x4falcon.com/user";
     }
 
     protected void launchBrowser(URL url) {

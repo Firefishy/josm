@@ -2,7 +2,7 @@ package org.openstreetmap.gui.jmapviewer.tilesources;
 
 public class OsmTileSource {
 
-    public static final String MAP_MAPNIK = "http://tile.openstreetmap.org";
+    public static final String MAP_MAPNIK = "http://map.4x4falcon.com/default";
 
     public static class Mapnik extends AbstractOsmTileSource {
         public Mapnik() {

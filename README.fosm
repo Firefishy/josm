@@ -2,14 +2,45 @@ Files changed for fosm
 
 src/org/openstreetmap/josm/gui/MainApplication.java
 
+	line 96
+	line 282
+
 src/org/openstreetmap/gui/jmapviewer/tilesources/OsmTileSource.java
+
+	line 5			tile.openstreetmap.com		->	map.4x4falcon.com/default
 
 src/org/openstreetmap/josm/io/OsmApi.java
 
+	line 84			api.openstreetmap.org/api	->	fosm.org
+	line 203		openstreetmap.org		->	fosm.org
+
 src/org/openstreetmap/gui/jmapviewer/tilesources/AbstractOsmTileSource.java
+
+	line 30			OpenStreetMap			->	fosm.org
+	line 35			openstreetmap.org		->	fosm.org
+	line 55			openstreetmap.org		->	fosm.org	
 
 src/org/openstreetmap/josm/gui/SplashScreen.java
 
+	line 65			add fosm.org
+
 src/org/openstreetmap/josm/io/BoundingBoxDownloader.java
 
+	line 39			add "http://api.openstreetmap.org/api/0.6/"+	this locks gpx downloads to openstreetmap
+
 src/org/openstreetmap/josm/actions/AbstractInfoAction.java
+
+	line 40			api.openstreetmap.org		->	fosm.org
+	line 46,47,48						->	fosm.org
+	line 52			add map.4x4falcon.com/browse			this locks to map.4x4falcon.com/browse
+	line 59			api.openstreetmap.org		->	fosm.org
+	line 65,66,67						->	fosm.org
+	line 74			add map.4x4falcon.com/user			this locks to map.4x4falcon.com/user
+
+src/org/openstreetmap/josm/gui/preferences/server/OsmApiUrlInputPanel.java
+
+	line 40			api.openstreetmap.org		->	fosm.org
+
+
+
+

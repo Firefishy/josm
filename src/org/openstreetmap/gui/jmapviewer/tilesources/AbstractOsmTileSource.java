@@ -27,12 +27,12 @@ public abstract class AbstractOsmTileSource extends AbstractTMSTileSource {
 
     @Override
     public String getAttributionText(int zoom, Coordinate topLeft, Coordinate botRight) {
-        return "\u00a9 OpenStreetMap contributors, CC-BY-SA ";
+        return "\u00a9 fosm.org contributors, CC-BY-SA ";
     }
 
     @Override
     public String getAttributionLinkURL() {
-        return "http://openstreetmap.org/";
+        return "http://fosm.org/";
     }
 
     @Override
@@ -52,6 +52,6 @@ public abstract class AbstractOsmTileSource extends AbstractTMSTileSource {
 
     @Override
     public String getTermsOfUseURL() {
-        return "http://www.openstreetmap.org/copyright";
+        return "http://www.fosm.org/copyright";
     }
 }
