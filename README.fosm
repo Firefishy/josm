@@ -1,0 +1,15 @@
+Files changed for fosm
+
+src/org/openstreetmap/josm/gui/MainApplication.java
+
+src/org/openstreetmap/gui/jmapviewer/tilesources/OsmTileSource.java
+
+src/org/openstreetmap/josm/io/OsmApi.java
+
+src/org/openstreetmap/gui/jmapviewer/tilesources/AbstractOsmTileSource.java
+
+src/org/openstreetmap/josm/gui/SplashScreen.java
+
+src/org/openstreetmap/josm/io/BoundingBoxDownloader.java
+
+src/org/openstreetmap/josm/actions/AbstractInfoAction.java
