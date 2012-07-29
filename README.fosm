@@ -1,5 +1,10 @@
 Files changed for fosm
 
+build.xml
+
+	lines 44-51, 53-55	use a local REVISION.xml file TODO: this needs to be changed to get current version from github
+	line 63			add "Build-Name: josm-fosm"
+
 src/org/openstreetmap/josm/gui/MainApplication.java
 
 	line 96
@@ -40,6 +45,18 @@ src/org/openstreetmap/josm/actions/AbstractInfoAction.java
 src/org/openstreetmap/josm/gui/preferences/server/OsmApiUrlInputPanel.java
 
 	line 40			api.openstreetmap.org		->	fosm.org
+
+
+src/org/openstreetmap/josm/data/imagery/ImageryLayerInfo.java
+
+	line 29			josm.openstreetmap.de/maps	->	map.4x4falcon.com/maps.xml
+
+src/org/openstreetmap/josm/actions/AboutAction.java
+
+	line 70			add "-fosm.org"
+	line 81			josm.openstreetmap.de		->	map.4x4falcon.com/josm-fosm
+	line 84			josm.openstreetmap.de/newticket	->	github.com/4x4falcon/josm/issues/new
+	line 93			change 500 to 600
 
 
 

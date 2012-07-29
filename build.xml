@@ -41,14 +41,18 @@
 	  -->
     <target name="create-revision">
         <property name="revision.dir" value="${build.dir}"/>
+<!--
         <exec append="false" output="REVISION.XML" executable="svn" failifexecutionfails="false">
             <env key="LANG" value="C"/>
             <arg value="info"/>
-            <arg value="--xml"/>
+            <arg value="- -xml"/>
             <arg value="http://josm.openstreetmap.de/svn/trunk"/>
         </exec>
+-->
         <xmlproperty file="REVISION.XML" prefix="version" keepRoot="false" collapseAttributes="true"/>
+<!--
         <delete file="REVISION.XML"/>
+-->
         <tstamp>
             <format property="build.tstamp" pattern="yyyy-MM-dd HH:mm:ss"/>
         </tstamp>
@@ -60,6 +64,7 @@
 Revision: ${version.entry.commit.revision}
 Is-Local-Build: true
 Build-Date: ${build.tstamp}
+Build-Name: josm-fosm
 </echo>
     </target>
     <target name="dist" depends="compile,create-revision">

@@ -67,7 +67,7 @@ public class AboutAction extends JosmAction {
         license.setCaretPosition(0);
 
         JPanel info = new JPanel(new GridBagLayout());
-        JLabel caption = new JLabel("JOSM – " + tr("Java OpenStreetMap Editor"));
+        JLabel caption = new JLabel("JOSM – " + tr("Java OpenStreetMap Editor") + " – fosm.org");
         caption.setFont(new Font("Helvetica", Font.BOLD, 20));
         info.add(caption, GBC.eol().fill(GBC.HORIZONTAL).insets(10,0,0,0));
         info.add(GBC.glue(0,10), GBC.eol());
@@ -78,10 +78,10 @@ public class AboutAction extends JosmAction {
         info.add(new JLabel(tr("Java Version {0}",System.getProperty("java.version"))), GBC.eol().fill(GBC.HORIZONTAL).insets(10,0,0,0));
         info.add(GBC.glue(0,10), GBC.eol());
         info.add(new JLabel(tr("Homepage")), GBC.std().insets(10,0,10,0));
-        info.add(new UrlLabel("http://josm.openstreetmap.de",2), GBC.eol().fill(GBC.HORIZONTAL));
+        info.add(new UrlLabel("http://map.4x4falcon.com/josm-fosm",2), GBC.eol().fill(GBC.HORIZONTAL));
         info.add(GBC.glue(0,5), GBC.eol());
         info.add(new JLabel(tr("Bug Reports")), GBC.std().insets(10,0,10,0));
-        info.add(new UrlLabel("http://josm.openstreetmap.de/newticket",2), GBC.eol().fill(GBC.HORIZONTAL));
+        info.add(new UrlLabel("https://github.com/4x4falcon/josm/issues/new",2), GBC.eol().fill(GBC.HORIZONTAL));
 
         about.addTab(tr("Info"), info);
         about.addTab(tr("Readme"), createScrollPane(readme));
@@ -90,7 +90,7 @@ public class AboutAction extends JosmAction {
         about.addTab(tr("License"), createScrollPane(license));
         about.addTab(tr("Plugins"), new JScrollPane(PluginHandler.getInfoPanel()));
 
-        about.setPreferredSize(new Dimension(500,300));
+        about.setPreferredSize(new Dimension(600,300));
 
         JOptionPane.showMessageDialog(Main.parent, about, tr("About JOSM..."),
                 JOptionPane.INFORMATION_MESSAGE, ImageProvider.get("logo"));
